@@ -4,7 +4,7 @@ const path = require('path');
 function boot() {
     win = new BrowserWindow({
         title: "Simple Server",
-        icon: path.join('assets','SimpleServerIcon.ico'),
+        icon: path.join(__dirname, 'assets','SimpleServerIcon.ico'),
         frame: false,
         "webPreferences": {
             devTools : true,
