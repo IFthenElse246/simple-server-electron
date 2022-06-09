@@ -1,6 +1,8 @@
 const {app, BrowserWindow, screen} = require('electron');
 const path = require('path');
 
+require('@electron/remote/main').initialize()
+
 function boot() {
     win = new BrowserWindow({
         title: "Simple Server",
@@ -16,7 +18,7 @@ function boot() {
     win.on('closed', () => {
         win = null
     })
-    require('@electron/remote/main').initialize()
+    
 }
 
 app.whenReady().then(boot)

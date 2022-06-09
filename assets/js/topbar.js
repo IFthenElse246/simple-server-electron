@@ -1,7 +1,10 @@
-const win = require('@electron/remote').getCurrentWindow()
+document.addEventListener("DOMContentLoaded", function(event) {
+    const win = require('@electron/remote').getCurrentWindow()
 
-document.getElementById("close").addEventListener('click', closeWindow)
+    document.getElementById("close").addEventListener('click', closeWindow)
 
-function closeWindow() {
-    win.close()
-}
+    function closeWindow() {
+        win.close()
+    }
+
+  });
