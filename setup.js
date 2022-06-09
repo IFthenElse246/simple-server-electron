@@ -1,5 +1,4 @@
-const {app, BrowserWindow} = require('electron');
-const url = require('url');
+const {app, BrowserWindow, screen} = require('electron');
 const path = require('path');
 
 function boot() {
@@ -8,17 +7,17 @@ function boot() {
         icon: path.join('assets','SimpleServerIcon.ico'),
         frame: false,
         "webPreferences": {
-            "devTools" : true
+            devTools : true,
+            enableRemoteModule: true,
+            nodeIntegration: true
         }
     });
-    win.loadURL(url.format({
-        pathname: 'index.html',
-        slashes: true
-    }))
+    win.loadFile('index.html')
     win.on('closed', () => {
         win = null
     })
 }
 
-app.on('ready', boot);
+app.whenReady().then(boot)
 
+app.on('window-all-closed', () => app.quit());
