@@ -16,6 +16,7 @@ function boot() {
     win.on('closed', () => {
         win = null
     })
+    require('@electron/remote/main').initialize()
 }
 
 app.whenReady().then(boot)
