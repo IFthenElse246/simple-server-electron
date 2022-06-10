@@ -4,11 +4,14 @@
   "description": "A app to help you simply set up minecraft servers on your computer for free!",
   "main": "setup.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron ."
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Ianfinity",
+  "license": "MIT",
   "dependencies": {
     "@electron/remote": "^2.0.8"
+  },
+  "devDependencies": {
+    "electron": "^19.0.4"
   }
 }
