@@ -21,7 +21,11 @@ function boot() {
         win = null
     })
 <<<<<<< HEAD
+<<<<<<< HEAD
     enableWebContents(win.webContents);
+=======
+    
+>>>>>>> f58f7a7ee0fa294400357a085b1edbe6fa57c65e
 =======
     
 >>>>>>> f58f7a7ee0fa294400357a085b1edbe6fa57c65e
