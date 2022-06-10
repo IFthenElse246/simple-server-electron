@@ -16,6 +16,7 @@ function boot() {
             contextIsolation: false
         }
     });
+    //win.loadURL('https://codepen.io/helvetica/pen/BaYGyam')
     win.loadFile('index.html')
     win.on('closed', () => {
         win = null

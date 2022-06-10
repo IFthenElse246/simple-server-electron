@@ -19,7 +19,7 @@ html, body {
 
 #pages {
     width: 100%;
-    height: 100% - 42px;
+    height: 100%;
 }
 
 * {
@@ -34,22 +34,24 @@ html, body {
     margin: var(--hbb-margin);
     width: calc(50% - 2*var(--hbb-margin));
     height: calc(50% - 2*var(--hbb-margin) - 20px); 
-    background-image: linear-gradient(to right bottom, #1281e7, #008be9, #0095e9, #009de8, #12a6e7);
+    background: #0095e9;
     border: none;
     border-radius: 10px;
     color: white;
     font-weight: 900;
     font-size: 40px;
-    transition-duration: 0.1s;
+    transition: all 0.15s ease 0s;
     box-shadow: 0px 0px 20px 5px black, 0px 0px 15px 0px #1175b0 inset;
 }
 
-#homeButtons > button:hover {
-     background-image: linear-gradient(to right bottom, #1176d3, #0080d5, #0089d6, #0092d5, #149ad4);
+#homeButtons > button:hover, #homeButtons > button:focus {
+    transition: all 0.15s ease 0s;
+     background: #017bc2
 }
 
 #homeButtons > button:active {
-     background-image: linear-gradient(to right bottom, #1383eb, #008fee, #009aef, #00a4ef, #1aaeee);
+  transition: all 0.15s ease 0s;
+     background: #009aef;
 }
 
 
@@ -67,7 +69,7 @@ html, body {
 #pages > * {
     margin-top: 0px;
     margin-bottom: 0px;
-    
+    height: calc(100% - 42px);
     margin-left: var(--hb-outer-margin);
 }
 
@@ -105,12 +107,17 @@ html, body {
 }
 
 .scrollable {
-  margin-top: 20px;
-  height: calc(100% - 90px);
+  margin-top: 10px;
+  height: calc(99% - 130px);
   overflow-y: scroll;
-  width: calc(100%-100px);
+  width: calc(100%-80px);
 /*   background-color: #4d4d4d; */
-  padding: 8px;
+  padding: 0px 0px;
+  border-radius: 10px;
+  border-width: 3px;
+  border: black;
+  border-style: solid;
+  box-shadow: 0px 0px 10px 3px black;
 /*   border-radius: 10px; */
 }
 
@@ -172,4 +179,23 @@ header:not(.mac) {
 
 #minimize:hover {
     background-color: rgb(82, 82, 88);
+}
+
+button {
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 10px;               /* width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;        /* color of the tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(22, 22, 24);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border-color: #1c212f;
+  border-width: 2px;
 }
