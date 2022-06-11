@@ -66,18 +66,6 @@ window.onload = function(e) {
         pageContainers[typee].appendChild(header);
         
         
-        if (typee == "Servers") {
-            var cont = document.createElement("div");
-            cont.className = "scrollable";
-            pageContainers[typee].appendChild(cont);
-
-        for (var i = 0; i < 200; i++) {
-            var div = document.createElement("div");
-            div.className = "serverListItem";
-            div.innerText = "boring content blahblah lorem ipsum blah";
-            cont.appendChild(div);
-        }
-        }
 
         if (typee == "Files") {
         
