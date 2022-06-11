@@ -52,14 +52,14 @@ html, body {
 
 #homeButtons > button:hover, #homeButtons > button:focus {
     transition: all 0.15s ease 0s;
-    background: #017bc2;
+    background: #1ba8fa;
     transform: scale(1.04);
     box-shadow: 0px 0px 27px 3px var(--black), 0px 0px 15px 0px #1175b0 inset;
 }
 
 #homeButtons > button:active {
   transition: all 0.15s ease 0s;
-     background: #009aef;
+     background: #0173b4;
      transform: scale(0.96);
      box-shadow: 0px 0px 17px 6px var(--black), 0px 0px 15px 0px #1175b0 inset;
 }
